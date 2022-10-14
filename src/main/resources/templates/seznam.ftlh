@@ -12,29 +12,45 @@
 </head>
 <body>
 <div class="seznam">
- [#list seznamVizitka as vizitka]
+[#list seznamVizitka as vizitka]
 
       <a href="/detail">
       <div class="vizitka">
-
-            <div class="jmeno">${vizitka.jmeno} ${vizitka.prijmeni}</div>
+[#if vizitka.jmeno?has_content]
+            <div class="jmeno">${vizitka.jmeno}
+[/#if]
+[#if vizitka.prijmeni?has_content]
+            ${vizitka.prijmeni}</div>
+[/#if]
+[#if vizitka.firma?has_content]
             <div class="firma">${vizitka.firma}</div>
+[/#if]
             <div class="udaje">
-                <div class="adresa">
-                    <div>${vizitka.ulice}</div>
-                    <div><span>${vizitka.obecPsc}</span></div>
-                </div>
-                <div class="kontakty">
-                    <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>
-                    <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>
-                    <div><i class="las la-globe"></i> <span>${vizitka.web}.cz</span></div>
+            <div class="adresa">
+[#if vizitka.ulice?has_content]
+            <div>${vizitka.ulice}</div>
+[/#if]
+[#if vizitka.obecPsc?has_content]
+            <div><span>${vizitka.obecPsc}</span></div>
+[/#if]
 
+              </div>
+              <div class="kontakty">
+[#if vizitka.email?has_content]
+              <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>
+[/#if]
+[#if vizitka.telefon?has_content]
+               <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>
+[/#if]
+[#if vizitka.web?has_content]
+                <div><i class="las la-globe"></i> <span>${vizitka.web}.cz</span></div>
+[/#if]
                 </div>
             </div>
         </div>
 
     </a>
-     [/#list]
+[/#list]
 </div>
 </body>
 </html>
