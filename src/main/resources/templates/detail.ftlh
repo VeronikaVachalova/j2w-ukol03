@@ -12,43 +12,48 @@
 </head>
 <body>
 <div class="detail">
-    <div class="vizitka">
+      <div class="vizitka">
+
 [#if detailVizitka.jmeno?has_content]
-        <div class="jmeno">${vizitka.jmeno}
+<div class="jmeno">${detailVizitka.jmeno} ${detailVizitka.prijmeni}</div>
 [/#if]
-[#if detailVizitka.prijmeni?has_content]
-        ${vizitka.prijmeni}</div>
-[/#if]
+
 [#if detailVizitka.firma?has_content]
-        <div class="firma">${vizitka.firma}</div>
+<div class="firma">${detailVizitka.firma}</div>
 [/#if]
+
         <div class="udaje">
-            <div class="adresa">
+        <div class="adresa">
 [#if detailVizitka.ulice?has_content]
-                <div>${vizitka.ulice}</div>
+<div>${detailVizitka.ulice}</div>
 [/#if]
+
 [#if detailVizitka.obecPsc?has_content]
-                <div><span>${vizitka.obecPsc}</span></div>
+<div><span>${detailVizitka.obecPsc}</span></div>
 [/#if]
-            </div>
+</div>
+
             <div class="kontakty">
 [#if detailVizitka.email?has_content]
-                <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>
+<div><i class="las la-at"></i> <span>${detailVizitka.email}</span></div>
 [/#if]
+
 [#if detailVizitka.telefon?has_content]
-                <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>
+<div><i class="las la-phone-alt"></i> <span>${detailVizitka.telefon}</span></div>
 [/#if]
+
 [#if detailVizitka.web?has_content]
-                <div><i class="las la-globe"></i> <span>${vizitka.web}</span></div>
+<div><i class="las la-globe"></i> <span>${detailVizitka.web}</span></div>
 [/#if]
+
            </div>
         </div>
     </div>
 
     <div class="mapa">
-        <iframe style="border:none" src="https://frame.mapy.cz/?q=${"${vizitka.celaAdresa}"?url}" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
+<iframe style="border:none" src="https://frame.mapy.cz/?q=${detailVizitka.celaAdresa}" width="100%" height="100%" frameborder="0"></iframe>
 
+</div>
 </div>
 </body>
 </html>

@@ -12,16 +12,14 @@
 </head>
 <body>
 <div class="seznam">
-[#list seznamVizitka as vizitka]
+[#list seznamVsechVizitek as vizitka]
 
-      <a href="/detail">
+      <a href="/detail/${vizitka?index}">
       <div class="vizitka">
 [#if vizitka.jmeno?has_content]
-            <div class="jmeno">${vizitka.jmeno}
+            <div class="jmeno">${vizitka.jmeno} ${vizitka.prijmeni}</div>
 [/#if]
-[#if vizitka.prijmeni?has_content]
-            ${vizitka.prijmeni}</div>
-[/#if]
+
 [#if vizitka.firma?has_content]
             <div class="firma">${vizitka.firma}</div>
 [/#if]
@@ -43,7 +41,8 @@
                <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>
 [/#if]
 [#if vizitka.web?has_content]
-                <div><i class="las la-globe"></i> <span>${vizitka.web}.cz</span></div>
+                <div><i class="las la-globe"></i> <span>${vizitka.web}</span></div>
+
 [/#if]
                 </div>
             </div>
