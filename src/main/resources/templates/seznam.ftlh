@@ -17,7 +17,7 @@
       <a href="/detail/${vizitka?index}">
       <div class="vizitka">
 [#if vizitka.jmeno?has_content]
-            <div class="jmeno">${vizitka.jmeno} ${vizitka.prijmeni}</div>
+            <div class="jmeno">${vizitka.jmeno}</div>
 [/#if]
 
 [#if vizitka.firma?has_content]

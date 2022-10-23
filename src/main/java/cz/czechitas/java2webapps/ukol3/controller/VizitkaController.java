@@ -13,9 +13,9 @@ import java.util.List;
 @Controller
 public class VizitkaController {
   private final List<Vizitka> seznamVizitka = List.of(
-          new Vizitka("Petr", "Novy", "ABC,s.r.o.", "Sochorova 3202/26", "Brno 61600", "petr.novy@seznam.cz", "+420777800900", "https://cs.wikipedia.org/wiki/Petr_Nov%C3%BD"),
-          new Vizitka("Jana", "Stara", "Haf, a. s.", "Serikova 712/10", "Ostrava 70030", "jana.stara@email.cz", null, "https://kppp.pedf.cuni.cz/index.php/lide-na-katedre/jana-stara/"),
-          new Vizitka("Greta", "Hrabalova", "Mnau", "Tresnova 1261/5", "Trest 58901", "mnau@gmail.com", "+420606122900", null)
+          new Vizitka("Petr Novy", "ABC,s.r.o.", "Sochorova 3202/26", "Brno 61600", "petr.novy@seznam.cz", "+420777800900", "https://cs.wikipedia.org/wiki/Petr_Nov%C3%BD"),
+          new Vizitka("Jana Stara", "Stativ, a.s.", "Serikova 712/10", "Ostrava 70030", "jana.stara@email.cz", null, "https://kppp.pedf.cuni.cz/index.php/lide-na-katedre/jana-stara/"),
+          new Vizitka("Greta Hrabalova", "Mnaucko", "Tresnova 1261/5", "Trest 58901", "mnau@gmail.com", "+420606122900", null)
   );
 
   @GetMapping("/")

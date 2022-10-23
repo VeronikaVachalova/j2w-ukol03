@@ -2,7 +2,6 @@ package entity;
 
 public class Vizitka {
     private String jmeno;
-    private String prijmeni;
     private String firma;
     private String ulice;
     private String obecPsc;
@@ -10,9 +9,8 @@ public class Vizitka {
     private String telefon;
     private String web;
 
-    public Vizitka(String jmeno, String prijmeni, String firma, String ulice, String obecPsc, String email, String telefon, String web) {
+    public Vizitka(String jmeno, String firma, String ulice, String obecPsc, String email, String telefon, String web) {
         this.jmeno = jmeno;
-        this.prijmeni = prijmeni;
         this.firma = firma;
         this.ulice = ulice;
         this.obecPsc = obecPsc;
@@ -27,14 +25,6 @@ public class Vizitka {
 
     public void setJmeno(String jmeno) {
         this.jmeno = jmeno;
-    }
-
-    public String getPrijmeni() {
-        return prijmeni;
-    }
-
-    public void setPrijmeni(String prijmeni) {
-        this.prijmeni = prijmeni;
     }
 
     public String getFirma() {
@@ -86,7 +76,8 @@ public class Vizitka {
     }
 
     public String getCelaAdresa() {
-        return String.format("%s, %s", ulice, obecPsc);
+        return ulice + ", " + obecPsc;
     }
+
 
 }

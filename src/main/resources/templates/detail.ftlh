@@ -15,7 +15,7 @@
       <div class="vizitka">
 
 [#if detailVizitka.jmeno?has_content]
-<div class="jmeno">${detailVizitka.jmeno} ${detailVizitka.prijmeni}</div>
+<div class="jmeno">${detailVizitka.jmeno}</div>
 [/#if]
 
 [#if detailVizitka.firma?has_content]
